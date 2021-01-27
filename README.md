@@ -9,3 +9,13 @@ Curso de Java e JPA: Persista seus objetos com a JPA2 e Hibernate
 - A JPA é um ORM (Object Relacional Mapper) Java
 - Um ORM mapeia as classes para tabelas e gera o SQL de forma automática
 - Para inicializar a JPA, é preciso definir um arquivo de configuração, chamado persistence.xml. Nele, colocamos as configurações mais importantes, como o driver e os dados da conexão
+
+
+**02-Usando EntityManager**
+- A JPA sincroniza o estado de uma entidade gerenciada com o banco de dados. Isto é, o SQL será gerado baseado na diferença entre a entidade em memória e o banco de dados. Para essa sincronização acontecer, a entidade precisa estar gerenciada (Managed)
+- Os estados de uma entidade são: `Managed`, `Detached`, `Transient` e `Removed`
+- No estado `Managed` a entidade é automaticamente sincronizada com o banco
+- No estado `Detached` a entidade pode conter id, mas não mantém uma sincronização com o banco
+- No estado `Transient` a entidade nunca foi `Managed`, não possui um ID, provavelmente nunca passou pelo `EntityManager` e não está no banco de dados
+- No estado `Removed` a entidade possui um ID, mas não possui está sendo gerenciado pelo `EntityManager` e não está no banco de dados
+
