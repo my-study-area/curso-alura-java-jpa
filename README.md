@@ -19,3 +19,10 @@ Curso de Java e JPA: Persista seus objetos com a JPA2 e Hibernate
 - No estado `Transient` a entidade nunca foi `Managed`, não possui um ID, provavelmente nunca passou pelo `EntityManager` e não está no banco de dados
 - No estado `Removed` a entidade possui um ID, mas não possui está sendo gerenciado pelo `EntityManager` e não está no banco de dados
 
+
+**03-Mapeando relacionamentos**
+- Relacionamentos entre entidades precisam ser configurados pelas anotações no atributo que define o relacionamento na classe
+- Um relacionamento do tipo Muitos-para-Um deve usar anotação @ManyToOne
+- A anotação @ManyToOne causa a criação de uma chave estrangeira
+- A JPA carrega automaticamente o relacionamento ao carregar a entidade
+- Uma entidade com relacionamento só pode ser persistir se o seu relacionamento estiver no estado `Managed`
