@@ -26,3 +26,9 @@ Curso de Java e JPA: Persista seus objetos com a JPA2 e Hibernate
 - A anotação @ManyToOne causa a criação de uma chave estrangeira
 - A JPA carrega automaticamente o relacionamento ao carregar a entidade
 - Uma entidade com relacionamento só pode ser persistir se o seu relacionamento estiver no estado `Managed`
+
+**04-Relacionamento para Muitos**
+- Podemos relacionar entidades com @OneToOne, @OneToMany e @ManyToMany, dependendo da cardinalidade
+- Um relacionamento @ManyToMany gera uma tabela extra no banco de dados para estabelecer o relacionamento
+- Para persistir uma entidade, devemos persistir as entidades transientes do relacionamento
+- No relacionamento @OneToOne devemos adicionar a anotação `@JoinColumn(unique = true)` para evitar a duplicidade
