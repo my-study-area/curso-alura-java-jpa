@@ -28,7 +28,7 @@ public class TesteRelacionamentoMovimentacaoCategoria {
 		movimentacao1.setData(LocalDate.now());
 		movimentacao1.setTipoMovimentacao(TipoMovimentacao.ENTRADA);
 		movimentacao1.setValor(BigDecimal.valueOf(300.00));
-		movimentacao1.setCategoria(Arrays.asList(categooria1, categooria2));
+		movimentacao1.setCategorias(Arrays.asList(categooria1, categooria2));
 		movimentacao1.setConta(conta);
 		
 		Movimentacao movimentacao2 = new Movimentacao();
@@ -36,7 +36,7 @@ public class TesteRelacionamentoMovimentacaoCategoria {
 		movimentacao2.setData(LocalDate.now());
 		movimentacao2.setTipoMovimentacao(TipoMovimentacao.ENTRADA);
 		movimentacao2.setValor(BigDecimal.valueOf(300.00));
-		movimentacao2.setCategoria(Arrays.asList(categooria1, categooria2));
+		movimentacao2.setCategorias(Arrays.asList(categooria1, categooria2));
 		movimentacao2.setConta(conta);
 		
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("contas");
