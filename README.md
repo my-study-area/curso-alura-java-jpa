@@ -32,3 +32,9 @@ Curso de Java e JPA: Persista seus objetos com a JPA2 e Hibernate
 - Um relacionamento @ManyToMany gera uma tabela extra no banco de dados para estabelecer o relacionamento
 - Para persistir uma entidade, devemos persistir as entidades transientes do relacionamento
 - No relacionamento @OneToOne devemos adicionar a anotação `@JoinColumn(unique = true)` para evitar a duplicidade
+
+**04-Pesquisando com JPQL**
+- A linguagem JPQL é bem parecida com SQL, no entanto orientada a objetos
+- Com JPQL, usamos as classes e atributos (no lugar das tabelas e colunas) para definir a pesquisa
+- O objeto do tipo `javax.persistence.Query` encapsula a query
+- `javax.persistence.TypedQuery` é a versão tipada do `javax.persistence.Query`
